@@ -1,0 +1,39 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <h1>hello Edupoly</h1>
+        <h2>Praveen</h2>
+        <div id="d1">Suribabu</div>
+        <div class="angular">Samanta</div>
+        <div class="react">prasanthi</div>
+        <div class="angular">Srileela</div>
+        
+        <div class="react">Sany</div>
+        <div class="angular">Sameera</div>
+        <div class="react">raghu</div>
+
+        <h2>vinayak</h2>
+        <script>
+            // var x=document.getElementById('d1');
+            // console.dir(x)
+            var y=document.getElementsByClassName('angular');
+            for(var i=0;i<=y.length-1;i++){
+                y[i].style.color='red'
+            }
+
+            // var p=document.getElementsByClassName('react')
+            // for(var j=0;j<=p.length-1;j++){
+            //     p[j].style.color='blue'
+            // }
+
+            var r=document.querySelectorAll('.react');
+            r.forEach(function(a){
+                a.style.color='orange';
+                a.style.backgroundColor='green'
+            })
+            // var z=document.getElementsByTagName('react');
+            // console.log(z)
+        </script>
+    </body>
+</html>

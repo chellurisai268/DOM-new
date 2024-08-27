@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        
+        <style>
+            #td{
+                background-color: aquamarine;
+            }
+        </style>
+    </head>
+    <body>
+        <table border="2px solid" cellpadding="10">
+            <thead>
+                <tr>
+                    <td id="td">NAME</td>
+                    <td id="td">GENDER</td>
+                    <td id="td">PLACE</td>
+                    
+                </tr>
+            </thead>
+            <tbody id="d1">
+
+            </tbody>
+        </table>
+        <script>
+            var students = [
+                                {
+                                name:'jaya',
+                                gender:'female',
+                                place:'gachibowli',
+                                },
+                                {
+                                name:'dasu',
+                                gender:'male',
+                                place:'kphb'
+                                },
+                                {
+                                name:'swati',
+                                gender:'female',
+                                place:'pune'
+                                },
+                                {
+                                name:'pallavi',
+                                gender:'female',
+                                place:'assam'
+                                },
+                                {
+                                name:'kiran',
+                                gender:'male',
+                                place:'kondapur'
+                                },
+                                {
+                                name:'thirumala',
+                                gender:'male',
+                                place:'madhapur'
+                                },
+                                {
+                                name:'priya',
+                                gender:'female',
+                                place:'hitech'
+                                },
+                            ];
+                            students.forEach(function(s){
+                                ntr=document.createElement('tr');
+                                var td=document.createElement('td');
+                                td.innerHTML=s.name;
+                                var td2=document.createElement('td');
+                                td2.innerHTML=s.gender;
+                                var td3=document.createElement('td');
+                                td3.innerHTML=s.place;
+                                var td4=document.createElement('td');
+                                var icon=document.createElement('i');
+                                if(s.gender=='male'){
+                                    ntr.style.backgroundColor='yellow';
+                                    icon.classList.add("bi","bi-person-standing","display-1");
+                                }
+                                else{
+                                    ntr.style.backgroundColor='green'
+                                    icon.classList.add("bi","bi-person-standing-dress","display-1");
+                                }
+                                td3.appendChild(icon)
+                                ntr.appendChild(td)
+                                ntr.appendChild(td2)
+                                ntr.appendChild(td3)
+                                document.getElementById('d1').appendChild(ntr)
+                            })
+
+
+        </script>
+    </body>
+</html>
+
+

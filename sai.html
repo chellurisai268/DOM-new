@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>responsive website</title>
+    </head>
+    <style>
+        #box{
+            border: 2px solid black;
+            width: 250px;
+            margin-left: 450px;
+            margin-top: 100px;
+            padding:30px;
+            background-color:rgba(245, 245, 245, 0.598);
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px 5px;
+        }
+        #box h1{
+            font-size:x-large;
+        }
+        #box p{
+        font-size:small;
+        }
+        #box img{
+            margin-top: 0cap;
+        }
+        #box button{
+            height: 40px;
+            width: 200px;
+            border-radius: 30px;
+            background-color: rgba(0, 0, 255, 0.74);
+            color: white;
+            cursor: pointer;
+        }
+        #ee{
+            height:25px;
+            width: 200px;
+            border-radius: 5px;
+        }
+
+    </style>
+    <body>
+        <div id="box">
+        <img src="https://th.bing.com/th?id=OIP.j-3vUMvS42mUHOHjpgAAWQHaEK&w=333&h=187&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" alt="" height="80px" width="250px">
+        <h1>Sign in</h1>
+        <p>stay updated on your professional world</p>
+            <input type="email" placeholder="email" id="ee"><br><br>
+            <input type="password" placeholder="password" id="ee">
+            <h4>Forgot Password?</h4>
+            <button onclick="changecolor()">Sign in</button><br><br>
+            New to linkedin? Join now
+        </div>
+        <script>
+            function changecolor(){
+                let intag=document.querySelectorAll('#ee').value;
+                let email='saikatttamuri@gmail.com',pwd='sai@143';
+                if(ee==email && ee==pwd){
+                    alert('sure man');
+                }
+                else{
+                    alert('wrong details man');
+                }
+
+            }
+        </script>
+    </body>
+</html>

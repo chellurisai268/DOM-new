@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <style>
+            .table{
+               margin-top: 10%;
+            }
+            .form{
+                display: flex;
+            }
+        </style>
+    </head>
+    <body>
+        <center class="table">
+        <table border="2px solid">
+            <thead>
+                <tr>
+                    <td>NAME</td>
+                    <td>GENDER</td>
+                    <td>NUMBER</td>
+                    <td>AGE</td>
+                </tr>
+            </thead>
+            <tbody id="d1">
+
+            </tbody>
+        </table>
+        <br>
+        <br>
+    </center>
+        <div class="form">
+        <form id="myform">
+           NAME:: <input type="text" id="name">
+            <br><br>
+           GENDER:: <input type="text" id="gender">
+            <br><br>
+           NUMBER:: <input type="number" id="number">
+            <br><br>
+           AGE:: <input type="number" id="age">
+            <br><br>
+            <button class="btn" type="button" onclick="abc()">SUBMIT</button>
+         </form>
+         </div>
+         <script>
+            function abc(){
+                var ntr=document.createElement('tr');
+                var name=document.getElementById('name').value;
+                var gender=document.getElementById('gender').value;
+                var number=document.getElementById('number').value;
+                var age=document.getElementById('age').value;
+
+                var td1=document.createElement('td')
+                td1.innerHTML=name;
+                ntr.appendChild(td1);
+
+                var td2=document.createElement('td')
+                td2.innerHTML=gender;
+                ntr.appendChild(td2);
+
+                var td3=document.createElement('td')
+                td3.innerHTML=number;
+                ntr.appendChild(td3);
+
+                var td4=document.createElement('td')
+                td4.innerHTML=age;
+                ntr.appendChild(td4);
+                if(gender=='male'){
+                    ntr.style.color='red'
+                }
+                else{
+                    ntr.style.color='green'
+                }
+
+
+                document.getElementById('d1').appendChild(ntr);
+                document.getElementById('myform').reset();
+            }
+        </script>
+    </body>
+</html>
